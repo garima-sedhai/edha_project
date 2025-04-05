@@ -35,14 +35,67 @@
     <img src="images/bbrandproduct.png" alt="Foundation">
     </div>
     <div class="image">
-    <img src="images/Skin Care/skin care.jpg" alt="Skin care">
-    <img src="images/Setting Spray/setting spray.png" alt="Settingspray">
-    <img src="images/primer/primers1.jpg" alt="primer">
-    <img src="images/lipstick/sarangi.jpg" alt="lipsticks">
-    <img src="images/highlighter/blush.jpg" alt="highlighter">
-    <img src="images/foundation/foundation1.jpg" alt="Foundation">
-    <img src="images/bestsell/1b.png" alt="bestsell">
+        <div class="img-box">
+            <a href="#"><img src="images/Skin Care/skin care.jpg" alt="Skin care" id="skin_care"></a>
+            <div class="overlay">Skin care</div>
+        </div>
+        <div class="img-box">
+            <a href="#"><img src="images/Setting Spray/setting spray.png" alt="Settingspray" id="setting_spray"></a>
+            <div class="overlay">Settingspray</div>
+        </div>
+        <div class="img-box">
+            <a href="#"><img src="images/primer/primers1.jpg" alt="primer" id="primer"></a>
+            <div class="overlay">Primer</div>
+        </div>
+        <div class="img-box">
+            <a href="#"><img src="images/lipstick/sarangi.jpg" alt="lipsticks" id="lipstick"></a>
+            <div class="overlay">Lipsticks</div>
+        </div>
+        <div class="img-box">
+            <a href="#"><img src="images/highlighter/blush.jpg" alt="highlighter" id="highlighter"></a>
+            <div class="overlay">Highlighter</div>
+        </div>
+        <div class="img-box">
+            <a href="#"><img src="images/foundation/foundation1.jpg" alt="Foundation" id="foundation"></a>
+            <div class="overlay">Foundation</div>
+        </div>
+        <div class="img-box">
+            <a href="#"><img src="images/bestsell/1b.png" alt="bestsell" id="bestsell"></a>
+            <div class="overlay">Best Sell</div>
+        </div>
     </div>
+    <div class="image1">
+        <div class="img-box1">
+            <a href="#"><img src="images/eyecosmetic/eyeliner.jpg" alt="Skin care" id="skin_care"></a>
+            <div class="overlay1">Eye Cosmetic</div>
+        </div>
+        <div class="img-box1">
+            <a href="#"><img src="images/perfume/perfume.jpg" alt="Settingspray" id="setting_spray"></a>
+            <div class="overlay1">Fragrance</div>
+        </div>
+        <div class="img-box1">
+            <a href="#"><img src="images/powder/powder.jpg" alt="primer" id="primer"></a>
+            <div class="overlay1">Powder</div>
+        </div>
+        <div class="img-box1">
+            <a href="#"><img src="images/serum/serum.jpg" alt="lipsticks" id="lipstick"></a>
+            <div class="overlay1">Serum</div>
+        </div>
+        <div class="img-box1">
+            <a href="#"><img src="images/cream/cream3.jpg" alt="highlighter" id="highlighter"></a>
+            <div class="overlay1">Cream</div>
+        </div>
+        <div class="img-box1">
+            <a href="#"><img src="images/cleanser/cleanser.jpg" alt="highlighter" id="highlighter"></a>
+            <div class="overlay1">Cleanser</div>
+        </div>
+        <div class="img-box1">
+            <a href="#"><img src="images/lotion/lotion.jpg" alt="highlighter" id="highlighter"></a>
+            <div class="overlay1">Body Lotion</div>
+        </div>
+    </div>
+    
+    
 
 </body>
 </html>
@@ -50,6 +103,7 @@
     html,body{
         width: 100%;
         margin: 0%;
+        background-color: rgb(211, 206, 201);
     }
     header{
         display: flex;
@@ -57,6 +111,10 @@
         align-items: center;
         background-color: rosybrown; 
         width: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index:1000
 
 
     }
@@ -93,6 +151,7 @@
     }
     .product{
         display:flex;
+        margin-top: 150px;
         justify-content: space-between;
         background-color: rgb(211, 206, 201);
         color: #000000;
@@ -129,15 +188,103 @@
         display: block;
         object-fit: cover;
     }
-    .image{
-        display: flex;
-        gap: 33px;
+    .image {
+    display: flex;
+    gap: 33px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
 
-    }
-    .image img{
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-    }
+.img-box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.img-box:hover img {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 192, 203, 0.5); /* Transparent pink */
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.img-box:hover .overlay {
+    opacity: 1;
+}
+.image1 {
+    display: flex;
+    gap: 33px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.img-box1 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.img-box1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.img-box1:hover img {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 192, 203, 0.5); /* Transparent pink */
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.img-box1:hover .overlay1 {
+    opacity: 1;
+}
+
+    
 
 </style>
