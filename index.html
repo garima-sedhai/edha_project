@@ -34,9 +34,23 @@
     <div class="brand">
     <img src="images/bbrandproduct.png" alt="Foundation">
     </div>
+    <div class="image">
+    <img src="images/Skin Care/skin care.jpg" alt="Skin care">
+    <img src="images/Setting Spray/setting spray.png" alt="Settingspray">
+    <img src="images/primer/primers1.jpg" alt="primer">
+    <img src="images/lipstick/sarangi.jpg" alt="lipsticks">
+    <img src="images/highlighter/blush.jpg" alt="highlighter">
+    <img src="images/foundation/foundation1.jpg" alt="Foundation">
+    <img src="images/bestsell/1b.png" alt="bestsell">
+    </div>
+
 </body>
 </html>
 <style>
+    html,body{
+        width: 100%;
+        margin: 0%;
+    }
     header{
         display: flex;
         justify-content: space-between;
@@ -113,6 +127,16 @@
         width: 100%;
         height: auto;
         display: block;
+        object-fit: cover;
+    }
+    .image{
+        display: flex;
+        gap: 33px;
+
+    }
+    .image img{
+        width: 150px;
+        height: 150px;
         object-fit: cover;
     }
 
